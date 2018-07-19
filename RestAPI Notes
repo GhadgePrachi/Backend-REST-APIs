@@ -1,0 +1,49 @@
+﻿Client-Server Model
+                                      |
+                                      |   Process Request URL (ACTION : GET/POST etc, RESOURCE : Endpoints, Parameters)
+                                      |           ↕
+                                      |           |
+ ________________________             |      _____|_____
+|                        |Request URL |     |           | ➥  Server01
+|Web Client(User Browser)|----------> |     |Web Server | ➥  Server02
+|________________________|<---------- |     |___________| ➥  Server03
+                           Response   |           ⮁
+                                      |           ⮁
+                                      |           ⮁
+                                      |    ____________________
+                                      |   |                    |
+                                      |   | Server Side Script |
+                                      |   |____________________|
+                                      |           ⮁
+                                      |           ⮁
+                                      |           ⮁
+                                      |      ____________
+                                      |     |            |
+                                      |     | Database   |
+                                      |     |____________|
+                                      |
+                                 HTTP PROTOCOL
+
+
+Online Links:
+https://www.youtube.com/playlist?list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
+https://www.restapitutorial.com/lessons/httpmethods.html
+
+Installations:
+1)Java JDK :http://www.oracle.com/technetwork/java/javase/downloads/index.html
+2)Maven : http://maven.apache.org/download.cgi (Instruction Link : https://www.mkyong.com/maven/how-to-install-maven-in-windows/)
+3)MySQL : https://dev.mysql.com/downloads/workbench/
+
+
+Reference links:
+https://www.concretepage.com/mybatis-3/mybatis-3-annotation-example-with-select-insert-update-and-delete
+
+Tutorials point -
+https://www.tutorialspoint.com/mybatis/mybatis_annotations.htm
+
+Just on the sidelines -
+https://blog.lanyonm.org/articles/2014/04/21/spring-4-mybatis-java-config.html - github link for ref.
+https://objectpartners.com/2011/04/05/using-mybatis-annotations-with-spring-3-0-and-maven/
+https://www.quora.com/Why-does-IntelliJ-IDEA-keep-showing-me-the-annotations-are-not-allowed-here-error
+
+
