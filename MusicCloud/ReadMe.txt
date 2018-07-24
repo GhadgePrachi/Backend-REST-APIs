@@ -1,12 +1,12 @@
 Project Flow :
 
     MainModule :
-        PlaylistDriver.java : Initializes/Configs the application framework (Spring framework) and scans it's components (MainController.java).
+        MusicCloudDriver.java : Initializes/Configs the application framework (Spring framework) and scans it's components (MainController.java).
         MyBatisConnectionFactory.java : Sets up a database(DB) connection factory using mybatis-config.xml.
 
     SubModules :
         a)Controllers : Processes the request url and redirects to the respective services.
-            MainController.java
+            MusicCloudController.java
 
         b)Services : Consists of Restful Services Classes that communicate with DAO classes to access or send data.
             PlaylistService.java, SongService.java, UserService.java //interfaces
