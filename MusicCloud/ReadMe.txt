@@ -1,7 +1,7 @@
 Project Flow :
 
     MainModule :
-        MusicCloudDriver.java : Initializes/Configs the application framework (Spring framework) and scans it's components (MainController.java).
+        MusicCloudDriver.java : Initializes/Configs the application framework (Spring framework) and scans it's components (MusicCloudController.java).
         MyBatisConnectionFactory.java : Sets up a database(DB) connection factory using mybatis-config.xml.
 
     SubModules :
