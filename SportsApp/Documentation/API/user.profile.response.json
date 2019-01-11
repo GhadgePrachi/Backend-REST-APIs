@@ -1,0 +1,62 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "user.profile.response.json",
+	"title": "User",
+	"description": "A user's profile details",
+	"type": "object",
+	"properties": {
+		"user_id": {
+			"description": "The unique identifier for a user",
+			"type": "string"
+		},
+		"user_name": {
+			"description": "Name of user",
+			"type": "string"
+		},
+		"email_id": {
+			"description": "Email address of user",
+			"type": "string"
+		},
+		"password": {
+			"description": "Password for the user",
+			"type": "string"
+		},
+		"gender": {
+			"description": "Gender of user",
+			"type": "string"
+		},
+		"date_of_birth": {
+			"description": "Date of birth of user",
+			"type": "string"
+		},
+		"location": {
+			"description": "Location of the user",
+			"type": "string",
+		},
+		"member_since": {
+			"description": "Date when user created an account with SportsApp",
+			"type": "string"
+		},
+		"network":{
+			"description": "Social media links of the user",
+			"type": "object",
+			"properties": {
+				"twitter_link": {
+					"type": "string"
+				},
+				"facebook_link": {
+					"type": "string"
+				}
+			}
+		},
+		"bio": {
+			"description": "About me for the user",
+			"type": "string"
+		},
+		"image_url": {
+			"description": "Image Link of the User",
+			"type": "string"
+		}
+	},
+	"required": [ "user_id"]
+}

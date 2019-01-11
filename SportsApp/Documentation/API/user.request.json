@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "user.request.json",
+	"title": "User",
+	"description": "A user from SportsApp",
+	"type": "object",
+	"properties": {
+		"email_id": {
+			"description": "Email address of user",
+			"type": "string"
+		},
+		"password": {
+			"description": "Password for the user",
+			"type": "string"
+		},
+		"user_name": {
+			"description": "Name of the user",
+			"type": "string"
+		},
+		"location": {
+			"description": "Location of the user",
+			"type": "string",
+		}
+	},
+	"required": [ "email_id", "password"]
+}
+

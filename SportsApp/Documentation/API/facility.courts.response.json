@@ -1,0 +1,46 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "facility.courts.response.json",
+	"title": "Facility",
+	"description": "a facility's available courts list",
+	"type": "array",
+	"items": {
+        "type": "object"
+		"properties": {
+				"date": {
+					"type": "string"
+				},
+				"courts_available_list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"court_id": {
+								"type": "integer"
+							},
+							"court_name": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"start_time": {
+								"type": "string"
+							},
+							"end_time": {
+								"type": "string"
+							},
+							"time": {
+								"type": "string"
+							},
+							"price": {
+								"type": "string"
+							}
+						}
+					}
+					
+				}
+		}
+    },
+    "uniqueItems": true
+}

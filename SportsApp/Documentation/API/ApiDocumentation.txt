@@ -1,0 +1,223 @@
+1)Resources: 
+	Users :
+	Facilities :
+
+2)Endpoints :
+	paths:
+	/users:
+		post:
+			summary: Add a new user
+			requestBody:
+				description: Adding a user to the system
+				required: true
+				content:
+					application/json:
+						schema:
+							$ref: user.request.json
+		responses:
+			schema:
+				user.response.json
+		externalDocs:
+				ApiExamples.txt
+
+	/login:
+		post:
+			summary: Validate a user
+			requestBody:
+				description: Validating the user in the system
+				required: true
+				content:
+					application/json:
+						schema:
+							$ref: user.preview.request.json
+			responses:
+				schema:
+					user.response.json
+			externalDocs:
+				ApiExamples.txt
+
+	/users/{userId}:
+		get:
+			summary: Represents a user's information
+			description: 
+				This resource represents an individual user in the system.
+				Each user is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: userId
+				required: true
+				schema:
+					type: integer
+					description: The user ID
+			responses:
+				schema:
+					user.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/users/{userId}/profile:
+		get:
+			summary: Represents a user's profile information
+			description: 
+				This resource represents an individual user's profile in the system.
+				Each user is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: userId
+				required: true
+				schema:
+					type: integer
+					description: The user ID
+			responses:
+				schema:
+					user.profile.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/users/{userId}/settings:
+		get:
+			summary: Represents a user's settings information
+			description: 
+				This resource represents an individual user's settings in the system.
+				Each user is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: userId
+				required: true
+				schema:
+					type: integer
+					description: The user ID
+			responses:
+				schema:
+					user.settings.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/users/{userId}/events?selectedDate={selectedDate}:
+		get:
+			summary: Represents a user's scheduled events information
+			description: 
+				This resource represents an individual user's events information in the system.
+				Each user is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: userId
+				required: true
+				schema:
+					type: integer
+					description: The user ID
+				- in: query
+				name: selectedDate
+				schema:
+					type: string
+				required: false
+			responses:
+				schema:
+					user.events.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/facilities?location={location}&category={category}:
+		get:
+			summary: Represents a facilities' information
+			description: 
+				This resource represents facilities' information in the system.
+			parameters:
+				- in: query
+				name: location
+				schema:
+					type: string
+				required: true
+				- in: query
+				name: category
+				schema:
+					type: string
+				required: false
+			responses:
+				schema:
+					facilities.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/facilities/{faciltyId}/details:
+		get:
+			summary: Represents a facility details information
+			description: 
+				This resource represents an individual facility details in the system.
+				Each facility is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: facilityId
+				required: true
+				schema:
+					type: integer
+					description: The facility ID
+			responses:
+				schema:
+					facility.details.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/facilities/{faciltyId}/reviews:
+		get:
+			summary: Represents a facility reviews information
+			description: 
+				This resource represents an individual facility reviews in the system.
+				Each facility is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: facilityId
+				required: true
+				schema:
+					type: integer
+					description: The facility ID
+			responses:
+				schema:
+					facility.reviews.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/facilities/{faciltyId}/courts?startDate={startDate}&endDate={endDate}
+		get:
+			summary: Represents courts list for facility
+			description: 
+				This resource represents courts list for facility in the system.
+				Each facility is identified by a numeric `id`.
+			parameters:
+				- in: path
+				name: facilityId
+				required: true
+				schema:
+					type: integer
+					description: The facility ID
+				- in: query
+				name: startDate
+				schema:
+					type: string
+				required: false
+				- in: query
+				name: endDate
+				schema:
+					type: string
+				required: false
+			responses:
+				schema:
+					facility.courts.response.json
+			externalDocs:
+				ApiExamples.txt
+				
+	/reserve:
+		post:
+			summary: Make court reservation 
+			requestBody:
+				description: Make facility's court reservation by the user to the system
+				required: true
+				content:
+					application/json:
+						schema:
+							$ref: facility.court.request.json
+			responses:
+				schema:
+					facility.court.response.json
+			externalDocs:
+				ApiExamples.txt

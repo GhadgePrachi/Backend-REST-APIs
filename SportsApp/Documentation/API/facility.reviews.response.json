@@ -1,0 +1,26 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "facility.reviews.response.json",
+	"title": "Facility",
+	"description": "a facility's reviews list",
+	"type": "array",
+	"items": {
+        "type": "object",
+		"properties": {
+			"review_id": {
+				"type": "integer"
+			},
+			"user_name": {
+				"type": "string"
+			},
+			"content": {
+				"type": "string"
+			},
+			"time": {
+				"type": "string"
+			}
+		}
+    },
+    "uniqueItems": true,
+	"required": [ "review_id"]
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "facility.court.response.json",
+	"title": "Facility",
+	"description": "a facility's court reservation details",
+	"type": "object",
+	"properties": {
+		"reservation_id": {
+			"type": "integer"
+		},
+		"court_id": {
+			"type": "integer"
+		},
+		"user_id": {
+			"type": "integer"
+		},
+		"court_name": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"start_time": {
+			"type": "string"
+		},
+		"end_time": {
+			"type": "string"
+		},
+		"price": {
+			"type": "string"
+		},
+		"status": {
+			"type": "integer"
+		}
+	},
+    "uniqueItems": true
+}

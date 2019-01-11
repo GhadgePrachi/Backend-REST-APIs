@@ -1,0 +1,75 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "user.setting.response.json",
+	"title": "User",
+	"description": "A user's settings from SportsApp",
+	"type": "object",
+	"properties": {
+		"general": {
+			"description": "The general settings for the user",
+			"type": "object"
+			"properties": {
+				"user_name": {
+					"description": "Name of user",
+					"type": "string"
+				},
+				"email_id": {
+					"description": "Email address of user",
+					"type": "string"
+				},
+				"password": {
+					"description": "Password for the user",
+					"type": "string"
+				},
+				"gender": {
+					"description": "Gender of user",
+					"type": "string"
+				},
+				"date_of_birth": {
+					"description": "Date of birth of user",
+					"type": "string"
+				},
+				"location": {
+					"description": "Location of the user",
+					"type": "string",
+				},
+				"member_since": {
+					"description": "Date when user created an account with SportsApp",
+					"type": "string"
+				},
+				"network":{
+					"description": "Social media links of the user",
+					"type": "object",
+					"properties": {
+						"twitter_link": {
+							"type": "string"
+						},
+						"facebook_link": {
+							"type": "string"
+						}
+					}
+				},
+				"bio": {
+					"description": "About me for the user",
+					"type": "string"
+				}
+			}
+	    }
+		"advanced" : {
+			"description": "The advanced settings for the user",
+			"type": "object"
+			"properties": {
+				"payment_method": {
+					"description": "Payment method settings of the user",
+					"type": "string"
+				},
+				"show_interest_on_profile": {
+					"description": "Show interest on profile settings of the user",
+					"type": "string"
+				},
+				"allow_being_searched_by_name": {
+					"description": "Allow being searched by name settings of the user",
+					"type": "string"
+				}
+		}  
+}

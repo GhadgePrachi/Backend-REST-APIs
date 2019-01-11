@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://107.180.50.183:3306/sportsapp?serverTimezone=Asia/Calcutta" />
+                <property name="username" value="i1922897_wp1" />
+                <property name="password" value="Enjoy!018" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="api.mappers.UserMapper"/>
+        <mapper class="api.mappers.SettingMapper"/>
+        <mapper class="api.mappers.FacilityMapper"/>
+        <mapper class="api.mappers.CourtMapper"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,294 @@
+1. Post/Create User
+	/users: 
+		requestUrl: /users
+		requestBody:
+			{
+			"email_id" : "test",
+			"password" : "test"
+			}
+		response:
+			{
+			"user_id" : 1,
+			"user_name" : "Test Test",
+			"email_id" : "test@test.com",
+			"password" : "test",
+			"gender" : "Female",
+			"date_of_birth" : "1/1/2019",
+			"location" : "Test",
+			"member_since" : "1/1/2019",
+			"network" : 
+				{
+				"twitter_link" : "https://twitter.com/TestTest",
+				"facebook_link" : "https://facebook.com/TestTest",
+				},
+			"bio" : "Test Test Test",
+			"image_url" : "https://images.google.com/TestTest",
+			"status" : 1
+			}
+
+2.Post/Validate User 
+	/users{userId}: 
+		requestUrl: /users/1
+		requestBody:
+			{
+			"email_id" : "test",
+			"password" : "test"
+			}
+		response:
+			{
+			"user_id" : 1,
+			"user_name" : "Test Test",
+			"image_url" : "https://images.google.com/TestTest",
+			}
+
+3.Get User by Id
+	/users/{userId}:
+		requestUrl: /users/1
+		response: 
+			{
+			"user_id" : 1,
+			"user_name" : "Test Test",
+			"email_id" : "test@test.com",
+			"password" : "test",
+			"gender" : "Female",
+			"date_of_birth" : "1/1/2019",
+			"location" : "Test",
+			"member_since" : "1/1/2019",
+			"network" : 
+				{
+				"twitter_link" : "https://twitter.com/TestTest",
+				"facebook_link" : "https://facebook.com/TestTest",
+				},
+			"bio" : "Test Test Test",
+			"image_url" : "https://images.google.com/TestTest",
+			"status" : 1
+			}
+			
+4.Get User's Profile by Id
+	/users/{userId}/profile:
+		requestUrl: /users/1/profile
+		response: 
+			{
+			"user_id" : 1,
+			"user_name" : "Test Test",
+			"email_id" : "test@test.com",
+			"password" : "test",
+			"gender" : "Female",
+			"date_of_birth" : "1/1/2019",
+			"location" : "Test",
+			"member_since" : "1/1/2019",
+			"network" : 
+				{
+				"twitter_link" : "https://twitter.com/TestTest",
+				"facebook_link" : "https://facebook.com/TestTest",
+				},
+			"bio" : "Test Test Test",
+			"image_url" : "https://images.google.com/TestTest"
+			}
+			
+5.Get User Setting by Id
+	/users/{userId}/settings:
+		requestUrl: /users/1/settings
+		response: 
+			{
+			"general" : 
+				{
+				"user_name" : "Test Test",
+				"email_id" : "test@test.com",
+				"password" : "test",
+				"gender" : "Female",
+				"date_of_birth" : "1/1/2019",
+				"location" : "Test",
+				"member_since" : "1/1/2019",
+				"network" : 
+					{
+					"twitter_link" : "https://twitter.com/TestTest",
+					"facebook_link" : "https://facebook.com/TestTest",
+					},
+				"bio" : "Test Test Test"
+				},
+			"advanced" : 
+				{
+				"payment_method" : "Test Card",
+				"show_interest_on_profile" : "Yes",
+				"allow_being_searched_by_name" : "Yes"
+				}
+			}
+6.Get User Events By Id
+	/users/{userId}/events?selectedDate=:
+		requestUrl: /users/1/events
+		response: 
+			[ 
+				{
+				"date" : "Monday, 01-01-2019",
+				"events_list" : 
+					[ 
+					{
+					"facility_name" : "Test Facility 01",
+					"court_name" : "Court 01",
+					"description" : "Test 01 01",
+					"start_time" : 1000000000,
+					"end_time" : 1000000001,
+					"time" : "06:00 PM - 07:00 AM"
+					},
+					{
+					"facility_name" : "Test Facility 02",
+					"court_name" : "Court 02",
+					"description" : "Test 02 02",
+					"start_time" : 1000000000,
+					"end_time" : 1000000001,
+					"time" : "06:00 PM - 07:00 AM"
+					},
+					]
+				},
+				{
+				"date" : "Tuesday, 01-02-2019",
+				"events_list" : 
+					[ 
+					{
+					"facility_name" : "Test Facility 01",
+					"court_name" : "Court 01",
+					"description" : "Test 01 01",
+					"start_time" : 1000000000,
+					"end_time" : 1000000001,
+					"time" : "06:00 PM - 07:00 AM"
+					},
+					{
+					"facility_name" : "Test Facility 02",
+					"court_name" : "Court 02",
+					"description" : "Test 02 02",
+					"start_time" : 1000000000,
+					"end_time" : 1000000001,
+					"time" : "06:00 PM - 07:00 AM"
+					},
+					]
+				} 
+			]
+			
+7.Get Facilities
+	/facilities?location={location}&category={category}:
+		requestUrl: /facilities?location=TestLocation&category=Category
+		response: 
+			[ 
+				{
+				"facility_id" : 1,
+				"facility_name" : "Test Facility 01",
+				"address" : "TestLocation",
+				"telephone" : "111-111-1111",
+				"timings" : "1-1",
+				"ratings" : "5/5"
+				},
+				{
+				"facility_id" : 2,
+				"facility_name" : "Test Facility 02",
+				"address" : "TestLocation",
+				"telephone" : "222-222-2222",
+				"timings" : "2-2",
+				"ratings" : "5/5"
+				} 
+			]
+
+7.Get Facility Details
+	/facilities/{faciltyId}/details:
+		requestUrl: /facilities/1/details
+		response: 
+			[ 
+				{
+				"facility_id" : 1,
+				"facility_name" : "Test Facility 01",
+				"category" : "Test",
+				"address" : "TestLocation",
+				"telephone" : "111-111-1111",
+				"timings" : "1-1",
+				"ratings" : "5/5",
+				"summary" : "Test Facility 01 test test",
+				"image_url" : "https://images.google.com/TestFacility01"
+				},
+				{
+				"facility_id" : 2,
+				"facility_name" : "Test Facility 02",
+				"category" : "Test",
+				"address" : "TestLocation",
+				"telephone" : "222-222-2222",
+				"timings" : "2-2",
+				"ratings" : "5/5",
+				"summary" : "Test Facility 02 test test",
+				"image_url" : "https://images.google.com/TestFacility02"
+				} 
+			]
+			
+8.Get Facility Reviews
+	/facilities/{faciltyId}/reviews:
+		requestUrl: /facilities/1/reviews
+		response: 
+			[ 
+				{
+				"review_id" : 1,
+				"user_name" : "TestUser 01",
+				"content" : "Test Test Test",
+				"time" : "1/1/2019"
+				}, 
+				{
+				"review_id" : 2,
+				"user_name" : "TestUser 02",
+				"content" : "Test Test",
+				"time" : "1/1/2019"
+				}		 
+			]
+
+8.Get Facility's courts
+	/facilities/{faciltyId}/courts?startDate={startDate}&endDate={endDate}:
+		requestUrl: /facilities/1/courts?startDate=1/11/2019&endDate=2/22/2019
+		response: 
+			[ 
+				{
+				"date" : "Monday, 1-11-2019",
+				"courts_available_list" : 
+					[ 
+						{
+							"court_id" : 1,
+							"court_name" : "TestCourt 01",
+							"description" : "Test Test",
+							"start_time" : 1000000000,
+							"end_time" :  1000000001,
+							"time" : "06:00 AM - 07:00 AM",
+							"price" : "10"
+						}, 
+						{
+							"court_id" : 2,
+							"court_name" : "TestCourt 02",
+							"description" : "Test",
+							"start_time" :  1000000000,
+							"end_time" :  1000000001,
+							"time" : "06:00 AM - 07:00 AM",
+							"price" : "15"
+						} 
+					]
+				} 
+			]	 
+			]
+			
+9.Post/Make court reservation
+	/reserve: 
+		requestUrl: /reserve
+		requestBody:
+			{
+			"court_id" : 1,
+			"user_id" : 1,
+			"description" : "TestCourt 01 Reserve",
+			"start_time" : 1000000000,
+			"end_time" : 1000000001,
+			"price" : 10
+			}
+		response:
+			{
+			"reservation_id" : 1,
+			"user_id" : 1,
+			"court_id" : 1,
+			"court_name" : "TestCourt 01",
+			"description" : "TestCourt 01 Reserve",
+			"start_time" : 1000000000,
+			"end_time" : 1000000001,
+			"price" : "10",
+			"status" : 1
+			}

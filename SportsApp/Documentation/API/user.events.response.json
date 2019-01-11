@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "user.events.response.json",
+	"title": "User",
+	"description": "A user's list of events",
+	"type": "array",
+	"items": {
+        "type": "object"
+		"properties": {
+				"date": {
+					"type": "string"
+				},
+				"events_list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"facility_name": {
+								"type": "string"
+							},
+							"court_name": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"start_time": {
+								"type": "string"
+							},
+							"end_time": {
+								"type": "string"
+							},
+							"time": {
+								"type": "string"
+							}
+						}
+					}
+					
+				}
+		}
+    },
+    "uniqueItems": true,
+	"required": [ "user_id"]
+}

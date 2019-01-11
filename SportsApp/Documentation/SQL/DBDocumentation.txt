@@ -1,0 +1,9 @@
+Tables:
+users (with profile info)
+settings (with setting info)
+
+facilities(with facilitydetails info)
+reviews(with facilityreviews)
+
+courts(with courtdetails info)
+court_reservations(with timeslot info)
