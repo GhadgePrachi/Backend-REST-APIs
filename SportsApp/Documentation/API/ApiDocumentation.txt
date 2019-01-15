@@ -29,10 +29,10 @@
 				content:
 					application/json:
 						schema:
-							$ref: user.preview.request.json
+							$ref: user.request.json
 			responses:
 				schema:
-					user.response.json
+					user.preview.response.json
 			externalDocs:
 				ApiExamples.txt
 
