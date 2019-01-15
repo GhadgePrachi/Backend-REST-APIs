@@ -9,7 +9,7 @@ PRIMARY KEY (setting_id)
 FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-describe users;
+describe settings;
 
 
 
