@@ -1,4 +1,4 @@
-﻿Client-Server Model
+﻿Client-Server Model for Web API
                                          |
                                          |   Process Request URL (ACTION : GET/POST etc, RESOURCE : Endpoints, Parameters)
                                          |           ↕
@@ -12,7 +12,7 @@
                                          |           ⮁
                                          |    ____________________
                                          |   | Web Services or    |
-                                         |   | Server Side Script |
+                                         |   | Server Side Scripts|
                                          |   |____________________|
                                          |           ⮁
                                          |           ⮁
@@ -24,7 +24,7 @@
                                          |     | Document) |
                                          |     |___________|
                                          |
-                                   HTTP PROTOCOL
+                                   via Web Internet using HTTP (Hyper-Text-Transport-Protocol)
 
 Installations:
 1)Java JDK :http://www.oracle.com/technetwork/java/javase/downloads/index.html
