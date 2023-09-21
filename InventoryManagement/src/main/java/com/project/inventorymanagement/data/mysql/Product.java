@@ -18,17 +18,11 @@ import java.time.LocalDateTime;
 @Setter
 public class Product {
     @Id
-    @Column(name = "sku_id")
     Long skuId;
-    @Column(name = "image")
     String image;
-    @Column(name = "inventory_id")
     String inventoryId;
-    @Column(name = "additional_image_link")
     String additionalImageLink;
-    @Column(name = "style_id")
     Integer styleId;
-    @Column(name = "class_id")
     Integer classId;
     String color;
     Integer colorCode;
@@ -48,6 +42,7 @@ public class Product {
 
     @Column(precision = 10, scale = 2)
     BigDecimal salePrice;
+
     LocalDateTime salePriceEffectiveDate;
     String currency;
     Boolean shoprunnerEligible;
@@ -59,7 +54,6 @@ public class Product {
     Boolean featuredColorCategory;
     String relatedProducts;
     Boolean preorder;
-    @Column(name = "handling_code")
     String handlingCode;
     String video;
     String proportion;
@@ -74,6 +68,7 @@ public class Product {
     String productCategory;
     String sortOrder;
     Integer quantitySold;
+
     @Column(precision = 4, scale = 2)
     BigDecimal averageRating;
 }
